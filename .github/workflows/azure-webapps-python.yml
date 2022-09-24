@@ -24,6 +24,6 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd /home/${{ secrets.USERNAME }}/flask_hello
-            sudo pkill -9 -u ${{ secrets.USERNAME }}
+            pkill python3
             git pull
             python3 app.py
