@@ -25,3 +25,4 @@ jobs:
           script: |
             cd /home/azureuser/flask-hello
             git pull
+            python3 app.py
