@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:      
       - name: Deploy
-        uses: appleboy/ssh-action@master
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          script: |
+          user: ${{ secrets.USERNAME }}
+          pass: ${{ secrets.PASSWORD }}
+          first_ssh: |
             mkdir Yasser
